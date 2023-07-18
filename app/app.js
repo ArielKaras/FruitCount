@@ -1,11 +1,17 @@
 const http = require('http');
+const MongoClient = require('mongodb').MongoClient;
+require('dotenv').config();
 
-const server = http.createServer((req, res) => {
+MongoClient.connect(process.env.MONGODB_URI, function(err, client) {
+  const db = client.db('myFirstDatabase');
+
+  const server = http.createServer((req, res) => {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello World\n');
-});
+    res.end('Connected to MongoDB\n');
+  });
 
-server.listen(3000, '127.0.0.1', () => {
+  server.listen(3000, '127.0.0.1', () => {
     console.log('Server running at http://127.0.0.1:3000/');
+  });
 });
