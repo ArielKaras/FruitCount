@@ -1,0 +1,12 @@
+{
+  "name": "fruitcount",
+  "version": "1.0.0",
+  "description": "FruitCount is a simple web application developed using Node.js, MongoDB, and Docker, designed as an exercise in creating a containerized application with a NoSQL database and Infrastructure as Code (IaC).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

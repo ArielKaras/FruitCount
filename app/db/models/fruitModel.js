@@ -1,0 +1,1 @@
+# Contains your database models. For your application, you have a fruitModel.js which would define the schema for your fruits.
